@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gestão de Tarefas</h1>
+        <nav>
+            <a href="#usuarios">Usuários</a>
+            <a href="#tarefas">Tarefas</a>
+            <a href="#gerenciamento">Gerenciamento</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="usuarios">
+            <h2>Usuários</h2>
+
+            <form id="form-usuario">
+                <input type="text" id="usuario-nome" placeholder="Nome">
+                <input type="email" id="usuario-email" placeholder="Email">
+                <input type="text" id="usuario-setor" placeholder="Setor">
+                <button type="submit" id="btn-usuario">Cadastrar</button>
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Setor</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="lista-usuarios"></tbody>
+            </table>
+        </section>
+
+        <section id="tarefas">
+            <h2>Tarefas</h2>
+
+            <form id="form-tarefa">
+                <input type="text" id="tarefa-titulo" placeholder="Título">
+                <input type="text" id="tarefa-descricao" placeholder="Descrição">
+                <input type="date" id="tarefa-prazo">
+                <button type="submit" id="btn-tarefa">Cadastrar</button>
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Descrição</th>
+                        <th>Prazo</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="lista-tarefas"></tbody>
+            </table>
+        </section>
+
+        <section id="gerenciamento">
+            <h2>Gerenciamento</h2>
+            <p>Escolha um usuário e a tarefa que ele vai ser responsável.</p>
+
+            <form id="form-gerenciamento">
+                <select id="select-usuario"></select>
+                <select id="select-tarefa"></select>
+                <button type="submit">Atribuir</button>
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tarefa</th>
+                        <th>Responsável</th>
+                        <th>Prazo</th>
+                        <th>Atribuída em</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="lista-gerenciamento"></tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
